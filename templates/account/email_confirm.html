@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Confirm Your Email</title>
+  <style>
+    /* اینجا می‌تونی استایل‌های خودت رو بذاری */
+  </style>
+</head>
+<body style="background-color: #e9ecef; font-family: Arial, sans-serif;">
+
+  <table width="100%" bgcolor="#e9ecef" cellpadding="0" cellspacing="0">
+    <tr>
+      <td align="center" style="padding: 40px 0;">
+        <table width="600" bgcolor="#ffffff" cellpadding="0" cellspacing="0" style="border-radius: 8px; overflow: hidden;">
+          <tr>
+            <td style="padding: 20px; text-align: center; background-color: #1a82e2; color: white; font-size: 24px; font-weight: bold;">
+              Confirm Your Email Address
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding: 30px; font-size: 16px; color: #333;">
+              <p>Hello {{ user_display }},</p>
+              <p>Thank you for registering at {{ site_name }}.</p>
+              <p>Click the button below to confirm your email address:</p>
+              <p style="text-align: center; margin: 30px 0;">
+                <a href="{{ activate_url }}" style="background-color: #1a82e2; color: white; padding: 14px 28px; text-decoration: none; border-radius: 6px;">Confirm Email</a>
+              </p>
+              <p>If the button doesn't work, copy and paste this link into your browser:</p>
+              <p><a href="{{ activate_url }}">{{ activate_url }}</a></p>
+              <p>Cheers,<br>{{ site_name }} Team</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding: 20px; font-size: 12px; color: #888; text-align: center; background-color: #f5f5f5;">
+              You received this email because we received a request to register this address at {{ site_name }}.<br>
+              If you did not make this request, you can safely ignore this email.
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
