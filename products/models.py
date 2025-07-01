@@ -1,6 +1,7 @@
 from django.db import models
 from django.shortcuts import reverse
 from django.contrib.auth import get_user_model
+from django.utils.translation import gettext_lazy as _
 
 
 # custom manager
@@ -29,7 +30,7 @@ class Product(models.Model):
 
 
 class Comment(models.Model):
-    body = models.TextField(verbose_name='Please write your comment: ')
+    body = models.TextField(verbose_name=_('Please write your comment: '))
     author = models.ForeignKey(
 
         get_user_model(),
@@ -40,5 +41,5 @@ class Comment(models.Model):
 
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='comments', )
     active = models.BooleanField(default=True)
-    recommend = models.BooleanField(default=True, verbose_name='Do you recommend this product?')
+    recommend = models.BooleanField(default=True, verbose_name=_('Do you recommend this product?'))
     datetime_created = models.DateTimeField(auto_now_add=True)

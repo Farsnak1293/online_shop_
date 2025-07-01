@@ -1,7 +1,10 @@
 {% load static %}
+{% load i18n %}
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
 
+from django.utils.translation import gettext_lazy as _
 
 
 <head>
@@ -61,22 +64,22 @@
                                     <ul class="mainmenu d-lg-flex jusity-content-end jusity-content-lg-start pt-4">
                                         <li class="mainmenu__item menu-item-has-children active">
                                             <a href="{% url 'home' %}" class="mainmenu__link">
-                                                <span class="mm-text">خانه</span>
+                                                <span class="mm-text">{{  _('Home')}}</span>
                                             </a>
                                         </li>
                                         <li class="mainmenu__item menu-item-has-children">
                                             <a href="{% url 'product_list' %}" class="mainmenu__link">
-                                                <span class="mm-text">محصولات</span>
+                                                <span class="mm-text">{{  _('Products')}}</span>
                                             </a>
                                         </li>
                                         <li class="mainmenu__item menu-item-has-children">
                                             <a href="#" class="mainmenu__link">
-                                                <span class="mm-text">صفحات</span>
+                                                <span class="mm-text">{{ _('Pages') }}</span>
                                             </a>
                                          </li>
                                         <li class="mainmenu__item">
                                             <a href="contact-us.html" class="mainmenu__link">
-                                                <span class="mm-text">تماس با ما</span>
+                                                <span class="mm-text"> {{ _('Contact Us') }}</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -102,16 +105,17 @@
                                     </a>
                                     <ul class="user-info-menu">
                                         <li>
-                                            <a class="text-right" href="my-account.html">حساب کاربری</a>
+                                            <a class="text-right" href="my-account.html"> {{ _('Account') }}</a>
                                         </li>
                                         <li>
-                                            <a class="text-right" href="cart.html">سبد خرید</a>
+                                            <a class="text-right" href="cart.html">{{  _('Shopping Cart')}} </a>
                                         </li>
                                         <li>
-                                            <a class="text-right" href="wishlist.html">علاقه مندی ها</a>
+                                            <a class="text-right" href="wishlist.html">{{  _('Favorites')}}</a>
                                         </li>
                                         <li>
-                                            <a class="text-right" href="order-tracking.html">تاریخچه سفارشات</a>
+                                            <a class="text-right" href="order-tracking.html">{{ _('Order History') }}``</a>
+</a>
                                         </li>
                                     </ul>
                                 </li>
