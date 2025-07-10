@@ -1,8 +1,8 @@
 from django.views import generic
-from django.shortcuts import get_object_or_404,reverse
+from django.shortcuts import get_object_or_404,reverse,render
 from .forms import CommentForm
 from .models import Product, Comment
-
+from django.contrib import messages
 
 class ProductListView(generic.ListView):
     model = Product
